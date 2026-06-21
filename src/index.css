@@ -1,0 +1,144 @@
+@import "tailwindcss";
+
+:root {
+  --brand-red: #F02020;
+  --brand-blue: #3000FF;
+  --brand-green: #208010;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.brand-accent-text {
+  color: var(--brand-blue);
+}
+
+.brand-soft-panel {
+  border: 1px solid color-mix(in srgb, var(--brand-blue) 24%, white);
+  background: linear-gradient(135deg, rgba(240, 32, 32, 0.08), rgba(48, 0, 255, 0.08), rgba(32, 128, 16, 0.08));
+}
+
+.brand-icon-chip {
+  background: linear-gradient(135deg, rgba(240, 32, 32, 0.12), rgba(48, 0, 255, 0.14), rgba(32, 128, 16, 0.12));
+  color: var(--brand-blue);
+}
+
+.brand-button {
+  background: linear-gradient(90deg, var(--brand-red), var(--brand-blue), var(--brand-green));
+  color: #ffffff;
+  box-shadow: 0 10px 24px rgba(48, 0, 255, 0.18);
+}
+
+.brand-button:hover {
+  filter: brightness(0.95);
+}
+
+.brand-button-outline {
+  background: #ffffff;
+  color: var(--brand-blue);
+  border: 1px solid color-mix(in srgb, var(--brand-blue) 24%, white);
+}
+
+.brand-button-outline:hover {
+  background: linear-gradient(135deg, rgba(240, 32, 32, 0.08), rgba(48, 0, 255, 0.08), rgba(32, 128, 16, 0.08));
+}
+
+.brand-focus-ring:focus {
+  outline: none;
+}
+
+.brand-focus-ring:focus-visible {
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 1), 0 0 0 4px rgba(48, 0, 255, 0.35);
+}
+
+.ui-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.08);
+}
+
+.ui-card:hover {
+  box-shadow: 0 12px 26px rgba(15, 23, 42, 0.12);
+}
+
+.ui-card-strong {
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.95), rgba(248, 250, 252, 0.92));
+  border: 1px solid rgba(148, 163, 184, 0.24);
+  border-radius: 18px;
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.1);
+}
+
+.logo-marquee {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 8px 0;
+}
+
+.logo-track {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: max-content;
+  animation: logo-slide 24s linear infinite;
+}
+
+.logo-card {
+  width: 190px;
+  min-height: 92px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-image {
+  width: 100%;
+  height: 54px;
+  object-fit: contain;
+}
+
+.logo-fallback {
+  display: none;
+  font-size: 12px;
+  font-weight: 600;
+  color: #4b5563;
+  text-align: center;
+  line-height: 1.35;
+}
+
+@keyframes logo-slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-card {
+    width: 160px;
+    min-height: 84px;
+  }
+
+  .logo-image {
+    height: 48px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo-track {
+    animation: none;
+  }
+}
