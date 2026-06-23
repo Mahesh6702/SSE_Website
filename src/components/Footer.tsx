@@ -14,7 +14,7 @@ export default function Footer() {
           </div>
           <p className="text-sm text-gray-400 leading-relaxed">
             Professional facility management, maintenance and staffing services
-            across India. Trusted by leading companies since 2015.
+            across India. Trusted by leading companies since 2022.
           </p>
         </div>
 

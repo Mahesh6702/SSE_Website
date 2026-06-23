@@ -91,17 +91,17 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden text-white py-24 px-4">
+      <section className="hero-section relative overflow-hidden text-white py-40 md:py-56 px-4">
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${sseSymbolImage})` }}
+          className="hero-background absolute inset-0 bg-no-repeat"
+          style={{ backgroundImage: `url(${sseSymbolImage})`, backgroundPosition: "60% 18%", backgroundSize: "68%" }}
           aria-hidden="true"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-red-900/85 via-blue-900/80 to-green-900/85" aria-hidden="true" />
         <div className="relative z-10 max-w-6xl mx-auto">
           <div>
             <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-5">
-              Professional Facility Manpower Supplies
+              Professional Manpower Services
             </h1>
             <p className="text-gray-300 text-lg mb-8 leading-relaxed">
               Sri Sai Enterprises delivers end-to-end facility management, skilled labour staffing

@@ -1,5 +1,7 @@
 import { Target, Heart, ShieldCheck, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import sseOfficeImage from "../../sse_office_image.png";
+import coFounderPic from "../../CoFounderPic.jpg";
 
 const values = [
   { icon: ShieldCheck, title: "Integrity", desc: "We deliver what we promise — transparent pricing, honest timelines." },
@@ -8,8 +10,8 @@ const values = [
 ];
 
 const team = [
-  { name: "Kommu Mahender", role: "Founder & Operations Head", initials: "KM" },
-  { name: "Eega Mahesh", role: "Co-Founder & Investor", initials: "EM" },
+  { name: "Kommu Mahender", role: "Founder & Operations Head", initials: "KM", image: null },
+  { name: "Eega Mahesh", role: "Co-Founder & Investor", initials: "EM", image: coFounderPic },
 ];
 
 const companyProfile = [
@@ -60,18 +62,26 @@ export default function About() {
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-4">
-            {[
-              { val: "2022", label: "Established" },
-              { val: "5", label: "Team Members" },
-              { val: "6+", label: "Manufacturing Clients" },
-              { val: "150+", label: "Current Manpower" },
-            ].map((s) => (
-              <div key={s.label} className="brand-soft-panel rounded-xl p-6 text-center">
-                <div className="brand-accent-text text-3xl font-bold">{s.val}</div>
-                <div className="text-sm text-gray-500 mt-1">{s.label}</div>
-              </div>
-            ))}
+          <div className="flex flex-col gap-4">
+            <div 
+              className="rounded-xl overflow-hidden relative h-96 bg-cover"
+              style={{ backgroundImage: `url(${sseOfficeImage})`, backgroundPosition: "center top" }}
+            >
+              <div className="absolute inset-0 bg-black/40" />
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              {[
+                { val: "2022", label: "Established" },
+                { val: "5", label: "Team Members" },
+                { val: "6+", label: "Manufacturing Clients" },
+                { val: "150+", label: "Current Manpower" },
+              ].map((s) => (
+                <div key={s.label} className="bg-white/95 rounded-xl p-4 text-center shadow-sm">
+                  <div className="brand-accent-text text-2xl font-bold">{s.val}</div>
+                  <div className="text-xs text-gray-600 mt-1">{s.label}</div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -107,9 +117,13 @@ export default function About() {
           <div className="grid sm:grid-cols-2 gap-6">
             {team.map((t) => (
               <div key={t.name} className="ui-card p-6 text-center transition-shadow">
-                <div className="inline-flex items-center justify-center size-20 rounded-full bg-gray-900 text-white text-xl font-bold mb-3">
-                  {t.initials}
-                </div>
+                {t.image ? (
+                  <img src={t.image} alt={t.name} className="inline-block size-50 rounded-full object-contain mb-3 ml-6" />
+                ) : (
+                  <div className="inline-flex items-center justify-center size-20 rounded-full bg-gray-900 text-white text-xl font-bold mb-3">
+                    {t.initials}
+                  </div>
+                )}
                 <div className="font-semibold text-gray-900">{t.name}</div>
                 <div className="text-sm text-gray-500">{t.role}</div>
               </div>

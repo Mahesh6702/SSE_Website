@@ -18,6 +18,64 @@ body {
   color: var(--brand-blue);
 }
 
+/* Responsive Background Images */
+.hero-background {
+  background-size: 120% auto;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.hero-section {
+  min-height: 820px;
+}
+
+@media (max-width: 768px) {
+  .hero-background {
+    background-size: 180% auto;
+    background-position: center 20%;
+    background-attachment: scroll;
+  }
+
+  .hero-section {
+    min-height: 580px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-background {
+    background-size: 200% auto;
+    background-position: center 30%;
+  }
+
+  .hero-section {
+    min-height: 460px;
+  }
+}
+
+.services-background {
+  background-size: contain;
+  background-position: center -40px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+@media (max-width: 768px) {
+  .services-background {
+    background-size: 120%;
+    background-position: center -30px;
+    background-attachment: scroll;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-background {
+    background-size: 150%;
+    background-position: center -20px;
+  }
+}
+
 .brand-soft-panel {
   border: 1px solid color-mix(in srgb, var(--brand-blue) 24%, white);
   background: linear-gradient(135deg, rgba(240, 32, 32, 0.08), rgba(48, 0, 255, 0.08), rgba(32, 128, 16, 0.08));

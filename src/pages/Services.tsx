@@ -39,7 +39,7 @@ const services = [
   {
     icon: Wrench,
     title: "Logistics Services",
-    color: "bg-cyan-50 text-cyan-700",
+    color: "brand-icon-chip",
     items: [
       "Loading and unloading operations support",
       "Packing and picking workflow handling",
@@ -63,7 +63,7 @@ const services = [
   {
     icon: Users,
     title: "Picker/Packer",
-    color: "bg-indigo-50 text-indigo-700",
+    color: "brand-icon-chip",
     items: [
       "Dedicated picker and packer teams",
       "Order picking with barcode and bin support",
@@ -75,7 +75,7 @@ const services = [
   {
     icon: Users,
     title: "Security Guards",
-    color: "bg-amber-50 text-amber-700",
+    color: "brand-icon-chip",
     items: [
       "Trained guards for entry and exit control",
       "Visitor management and gate log maintenance",
@@ -87,7 +87,7 @@ const services = [
   {
     icon: Leaf,
     title: "Community Maintenance",
-    color: "bg-emerald-50 text-emerald-700",
+    color: "brand-icon-chip",
     items: [
       "Maintenance support for gated communities",
       "Common area housekeeping and cleanliness",
@@ -99,7 +99,7 @@ const services = [
   {
     icon: Leaf,
     title: "Housekeeping",
-    color: "bg-green-50 text-green-700",
+    color: "brand-icon-chip",
     items: [
       "Daily office and warehouse cleaning",
       "Deep-clean and sanitization",
@@ -114,13 +114,19 @@ export default function Services() {
   return (
     <>
       {/* Header */}
-      <section className="relative overflow-hidden text-gray-900 min-h-[320px] md:min-h-[420px] text-center flex items-start justify-center pt-6 md:pt-8">
+      <section className="services-hero relative overflow-hidden text-gray-900 min-h-[320px] md:min-h-[420px] text-center flex items-start justify-center pt-6 md:pt-8">
         <div
-          className="absolute inset-0 bg-no-repeat"
-          style={{ backgroundImage: `url(${employeesPic})`, backgroundPosition: "center -90px", backgroundSize: "100% auto" }}
+          className="services-background absolute inset-0 bg-no-repeat"
+          style={{ backgroundImage: `url(${employeesPic})` }}
+          aria-hidden="true"
+        />
+        <div
+          className="absolute inset-0"
+          style={{ background: "linear-gradient(135deg, rgba(240, 32, 32, 0.14), rgba(48, 0, 255, 0.14), rgba(32, 128, 16, 0.14))" }}
           aria-hidden="true"
         />
         <div className="relative z-10 px-4">
+          <div className="brand-accent-text text-sm font-semibold uppercase tracking-[0.2em] mb-3">SSE Services</div>
           <h1 className="text-4xl font-bold mb-3">Our Services</h1>
           <p className="text-gray-800 max-w-xl mx-auto">
             End-to-end manpower supplies and maintenance solutions tailored to your business needs.
@@ -130,9 +136,14 @@ export default function Services() {
 
       {/* Services grid */}
       <section className="py-16 px-4 bg-gradient-to-r from-red-50 via-blue-50 to-green-50">
-        <div className="max-w-6xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <div className="brand-accent-text text-sm font-semibold uppercase tracking-wide mb-2">What We Offer</div>
+            <h2 className="text-3xl font-bold text-gray-900">SSE Service Categories</h2>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((s) => (
-            <div key={s.title} className="ui-card p-6 transition-shadow">
+            <div key={s.title} className="ui-card brand-soft-panel p-6 transition-shadow">
               <div className={`inline-flex items-center justify-center size-12 rounded-xl mb-4 ${s.color}`}>
                 <s.icon className="size-6" />
               </div>
@@ -147,17 +158,19 @@ export default function Services() {
               </ul>
             </div>
           ))}
+          </div>
         </div>
       </section>
 
       {/* Process */}
       <section className="py-16 px-4 bg-gradient-to-r from-red-50 via-blue-50 to-green-50">
         <div className="max-w-4xl mx-auto text-center mb-12">
+          <div className="brand-accent-text text-sm font-semibold uppercase tracking-wide mb-2">Workforce Process</div>
           <h2 className="text-3xl font-bold text-gray-900">How We Hire & Manage Workforce</h2>
         </div>
         <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-6">
           {hiringFlow.map((item, index) => (
-            <div key={item.step} className="ui-card relative p-6">
+            <div key={item.step} className="ui-card brand-soft-panel relative p-6">
               <div className="brand-accent-text text-sm font-bold mb-2">STEP {item.step}</div>
               <div className="font-semibold text-gray-900 mb-2">{item.title}</div>
               <div className="text-sm text-gray-600 leading-relaxed">{item.desc}</div>
