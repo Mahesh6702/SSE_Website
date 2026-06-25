@@ -1,7 +1,11 @@
 import { Target, Heart, ShieldCheck, ArrowRight } from "lucide-react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import sseOfficeImage from "../../sse_office_image.png";
-import coFounderPic from "../../CoFounderPic.jpg";
+import founderPic from "../assets/about/FounderPic.jpg";
+import coFounderPic from "../assets/about/CoFounderPic.jpg";
+import officeImage1 from "../assets/about/office_image_1.jpeg";
+import officeImage2 from "../assets/about/office_image_2.jpeg";
+import officeImage3 from "../assets/about/office_image_3.jpeg";
 
 const values = [
   { icon: ShieldCheck, title: "Integrity", desc: "We deliver what we promise — transparent pricing, honest timelines." },
@@ -10,7 +14,7 @@ const values = [
 ];
 
 const team = [
-  { name: "Kommu Mahender", role: "Founder & Operations Head", initials: "KM", image: null },
+  { name: "Kommu Mahender", role: "Founder & Operations Head", initials: "KM", image: founderPic },
   { name: "Eega Mahesh", role: "Co-Founder & Investor", initials: "EM", image: coFounderPic },
 ];
 
@@ -22,6 +26,13 @@ const companyProfile = [
 ];
 
 export default function About() {
+  const [hoverPreview, setHoverPreview] = useState<{
+    src: string;
+    alt: string;
+    x: number;
+    y: number;
+  } | null>(null);
+
   return (
     <>
       {/* Header */}
@@ -63,11 +74,57 @@ export default function About() {
             </div>
           </div>
           <div className="flex flex-col gap-4">
-            <div 
-              className="rounded-xl overflow-hidden relative h-96 bg-cover"
-              style={{ backgroundImage: `url(${sseOfficeImage})`, backgroundPosition: "center top" }}
-            >
-              <div className="absolute inset-0 bg-black/40" />
+            <div className="space-y-4">
+              <div className="rounded-xl overflow-hidden">
+                <img
+                  src={officeImage1}
+                  alt="Sri Sai Enterprises office view 1"
+                  className="object-cover w-full h-64 cursor-zoom-in"
+                  onMouseMove={(e) =>
+                    setHoverPreview({
+                      src: officeImage1,
+                      alt: "Sri Sai Enterprises office view 1",
+                      x: e.clientX,
+                      y: e.clientY,
+                    })
+                  }
+                  onMouseLeave={() => setHoverPreview(null)}
+                />
+              </div>
+              <div className="grid grid-cols-2 gap-4 h-32">
+                <div className="rounded-xl overflow-hidden">
+                  <img
+                    src={officeImage2}
+                    alt="Sri Sai Enterprises office view 2"
+                    className="object-cover w-full h-full cursor-zoom-in"
+                    onMouseMove={(e) =>
+                      setHoverPreview({
+                        src: officeImage2,
+                        alt: "Sri Sai Enterprises office view 2",
+                        x: e.clientX,
+                        y: e.clientY,
+                      })
+                    }
+                    onMouseLeave={() => setHoverPreview(null)}
+                  />
+                </div>
+                <div className="rounded-xl overflow-hidden">
+                  <img
+                    src={officeImage3}
+                    alt="Sri Sai Enterprises office view 3"
+                    className="object-cover w-full h-full cursor-zoom-in"
+                    onMouseMove={(e) =>
+                      setHoverPreview({
+                        src: officeImage3,
+                        alt: "Sri Sai Enterprises office view 3",
+                        x: e.clientX,
+                        y: e.clientY,
+                      })
+                    }
+                    onMouseLeave={() => setHoverPreview(null)}
+                  />
+                </div>
+              </div>
             </div>
             <div className="grid grid-cols-2 gap-4">
               {[
@@ -140,6 +197,17 @@ export default function About() {
           Get in Touch <ArrowRight className="size-4" />
         </Link>
       </section>
+
+      {hoverPreview && (
+        <div
+          className="pointer-events-none fixed z-50 hidden md:block"
+          style={{ top: hoverPreview.y + 18, left: hoverPreview.x + 18 }}
+        >
+          <div className="rounded-xl bg-white p-2 shadow-2xl ring-1 ring-gray-200">
+            <img src={hoverPreview.src} alt={hoverPreview.alt} className="h-[28rem] w-[42rem] rounded-lg object-cover" />
+          </div>
+        </div>
+      )}
     </>
   );
 }
