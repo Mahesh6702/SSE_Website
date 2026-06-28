@@ -104,11 +104,16 @@ export default function Contact() {
                 </div>
                 <div>
                   <div className="font-semibold text-gray-900">Address</div>
-                  <div className="text-gray-500 text-sm">
-                    H.No: 7-145, K.V. Reddy Nagar, Gundla Pochampally,<br />
-                    Medchal (Mandal), Medchal-Malkajgiri (District), 501401,<br />
-                    Telangana.
-                  </div>
+                  <a
+                    href="https://maps.google.com/?q=H.No+2-28,+Muneerabad+Village,+Muneerabad,+Medchal-Malkajgiri,+Hyd,+Telangana-501401"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="text-blue-600 text-sm hover:underline font-medium"
+                  >
+                    H.No: 2-28, Muneerabad Village, Muneerabad,<br />
+                    Medchal-Malkajgiri, Hyd,<br />
+                    Telangana-501401.
+                  </a>
                 </div>
               </div>
               <div className="ui-card p-4 flex items-start gap-4">

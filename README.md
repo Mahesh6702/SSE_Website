@@ -90,6 +90,23 @@ Add project screenshots in an images folder and reference them here, for example
 
 Deploy the dist output to any static host (Netlify, Vercel, GitHub Pages, Firebase Hosting, etc.).
 
+For Netlify, this repo includes `netlify.toml` with SPA fallback routing so deep links like `/jobs?from=qr` work correctly.
+
+### QR Code URL Configuration
+
+The Careers page generates the QR target automatically.
+
+- If `VITE_PUBLIC_BASE_URL` is set, QR uses that base URL.
+- If not set, QR uses the current site origin (`window.location.origin`).
+
+For internet deployment, set:
+
+```bash
+VITE_PUBLIC_BASE_URL=https://your-domain.com
+```
+
+Then rebuild and deploy.
+
 Typical steps:
 
 1. npm run build

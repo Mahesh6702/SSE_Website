@@ -187,7 +187,7 @@ export default function Services() {
       {/* CTA */}
       <section className="py-16 px-4 bg-gradient-to-r from-red-700 via-blue-700 to-green-700 text-white text-center">
         <h2 className="text-2xl font-bold mb-3">Need a Custom Service Package?</h2>
-        <p className="text-gray-100 mb-6">We design logistics and facility management contracts to fit your budget.</p>
+        <p className="text-gray-100 mb-6">We design logistics and manpower management contracts to fit your budget.</p>
         <Link to="/contact" className="brand-button-outline brand-focus-ring inline-flex items-center gap-2 font-semibold px-6 py-3 rounded-lg transition">
           Request a Quote <ArrowRight className="size-4" />
         </Link>

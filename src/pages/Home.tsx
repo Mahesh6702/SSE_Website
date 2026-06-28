@@ -104,7 +104,7 @@ export default function Home() {
               Professional Manpower Services
             </h1>
             <p className="text-gray-300 text-lg mb-8 leading-relaxed">
-              Sri Sai Enterprises delivers end-to-end facility management, skilled labour staffing
+              Sri Sai Enterprises delivers end-to-end manpower management, skilled labour staffing
               and maintenance solutions — keeping your operations running smoothly.
             </p>
             <div className="flex flex-wrap gap-3">
@@ -132,7 +132,7 @@ export default function Home() {
             <div className="brand-accent-text text-sm font-semibold uppercase tracking-wide mb-2">What We Do</div>
             <h2 className="text-3xl font-bold text-gray-900">Our Core Services</h2>
             <p className="mt-3 text-gray-500 max-w-xl mx-auto">
-              From routine maintenance to complete facility management — we cover every need.
+              From routine maintenance to complete manpower management — we cover every need.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-5">
@@ -300,7 +300,7 @@ export default function Home() {
         <div className="max-w-2xl mx-auto">
           <h2 className="text-3xl font-bold mb-4">Ready to Work With SSE?</h2>
           <p className="text-gray-100 mb-8">
-            Get a customised quote for your facility or maintenance requirement in less than 24 hours.
+            Get a customised quote for your manpower requirement in less than 24 hours.
           </p>
           <Link
             to="/contact"

@@ -8,6 +8,7 @@ const links = [
   { to: "/services", label: "Services" },
   { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },
+  { to: "/careers", label: "Careers" },
 ];
 
 function SSELogo() {

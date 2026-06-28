@@ -13,8 +13,7 @@ export default function Footer() {
             <span style={{ color: "#208010" }}>Enterprises</span>
           </div>
           <p className="text-sm text-gray-400 leading-relaxed">
-            Professional facility management, maintenance and staffing services
-            across India. Trusted by leading companies since 2022.
+            Professional manpower management and maintenance services across Hyderabad. Consider our services trusted by leading companies since 2022.
           </p>
         </div>
 
@@ -22,10 +21,10 @@ export default function Footer() {
         <div>
           <div className="text-sm font-semibold text-white mb-3 uppercase tracking-wide">Quick Links</div>
           <ul className="space-y-2 text-sm">
-            {["/", "/services", "/about", "/contact"].map((to, i) => (
+            {["/", "/services", "/about", "/contact", "/careers"].map((to, i) => (
               <li key={to}>
                 <Link to={to} className="hover:text-white transition-colors">
-                  {["Home", "Services", "About Us", "Contact"][i]}
+                  {["Home", "Services", "About Us", "Contact", "Careers"][i]}
                 </Link>
               </li>
             ))}
@@ -56,8 +55,8 @@ export default function Footer() {
             <li className="flex items-start gap-2">
               <MapPin className="size-4 shrink-0 text-blue-300 mt-0.5" />
               <span>
-                H.No: 7-145, K.V. Reddy Nagar, Gundla Pochampally,<br />
-                Medchal (Mandal), Medchal-Malkajgiri (District), 501401, Telangana.
+                H.No: 2-28, Muneerabad Village, Muneerabad,<br />
+                Medchal-Malkajgiri, Hyd, Telangana-501401.
               </span>
             </li>
           </ul>

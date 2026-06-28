@@ -21,7 +21,7 @@ const team = [
 const companyProfile = [
   { label: "GST Registration", value: "GST Registered" },
   { label: "Registered State", value: "Telangana" },
-  { label: "Company Nature", value: "Facility Management & Manpower Services" },
+  { label: "Company Nature", value: "Manpower Management & Services" },
   { label: "Established", value: "2022" },
 ];
 
@@ -51,7 +51,7 @@ export default function About() {
             <h2 className="text-3xl font-bold text-gray-900 mb-5">Founded on Trust, Built on Quality</h2>
             <p className="text-gray-600 leading-relaxed mb-4">
               Sri Sai Enterprises was established in 2022 with a simple goal — to provide reliable, skilled
-              and affordable maintenance and facility management services to businesses across India.
+              and affordable maintenance and manpower management services to businesses across Hyderabad.
             </p>
             <p className="text-gray-600 leading-relaxed mb-4">
               With a core team of 5 members, we currently manage and deploy 150+ manpower professionals
@@ -94,13 +94,13 @@ export default function About() {
               <div className="grid grid-cols-2 gap-4 h-32">
                 <div className="rounded-xl overflow-hidden">
                   <img
-                    src={officeImage2}
-                    alt="Sri Sai Enterprises office view 2"
+                    src={officeImage3}
+                    alt="Sri Sai Enterprises office view 3"
                     className="object-cover w-full h-full cursor-zoom-in"
                     onMouseMove={(e) =>
                       setHoverPreview({
-                        src: officeImage2,
-                        alt: "Sri Sai Enterprises office view 2",
+                        src: officeImage3,
+                        alt: "Sri Sai Enterprises office view 3",
                         x: e.clientX,
                         y: e.clientY,
                       })
@@ -110,13 +110,13 @@ export default function About() {
                 </div>
                 <div className="rounded-xl overflow-hidden">
                   <img
-                    src={officeImage3}
-                    alt="Sri Sai Enterprises office view 3"
+                    src={officeImage2}
+                    alt="Sri Sai Enterprises office view 2"
                     className="object-cover w-full h-full cursor-zoom-in"
                     onMouseMove={(e) =>
                       setHoverPreview({
-                        src: officeImage3,
-                        alt: "Sri Sai Enterprises office view 3",
+                        src: officeImage2,
+                        alt: "Sri Sai Enterprises office view 2",
                         x: e.clientX,
                         y: e.clientY,
                       })
@@ -192,7 +192,7 @@ export default function About() {
       {/* CTA */}
       <section className="py-16 px-4 bg-gradient-to-r from-red-700 via-blue-700 to-green-700 text-white text-center">
         <h2 className="text-2xl font-bold mb-3">Let's Work Together</h2>
-        <p className="text-gray-400 mb-6">Talk to our team about your facility management needs.</p>
+        <p className="text-gray-400 mb-6">Talk to our team about your manpower management needs.</p>
         <Link to="/contact" className="brand-button brand-focus-ring inline-flex items-center gap-2 text-white font-semibold px-6 py-3 rounded-lg transition">
           Get in Touch <ArrowRight className="size-4" />
         </Link>
